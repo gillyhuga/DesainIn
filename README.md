@@ -1,3 +1,15 @@
+# Desainin Website
+
+## Pemograman Web G
+
+### Nama Kelompok :
+
+Gilly Huga Anargya 201910370311336
+
+Alif Syifa Arsyila 201910370311340
+
+Muthaqin Dean 201910370311342
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -60,3 +72,25 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## How To Run
+
+1. git clone https://github.com/gillyhuga/DesainIn.git
+2. copy file .env.example dan rename menjadi .env
+4. Buka project di terminal dan ketik command
+```console
+composer install
+``` 
+5. ketik command 
+```console
+php artisan key:generate
+``` 
+6. ketik command 
+```console
+php artisan migrate
+``` 
+
+7. ketik command 
+```console
+php artisan serve
+``` 
