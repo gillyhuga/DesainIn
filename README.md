@@ -75,22 +75,20 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## How To Run
 
-1. git clone https://github.com/gillyhuga/DesainIn.git
-2. copy file .env.example dan rename menjadi .env
+1. Clone repository
+```console
+https://github.com/gillyhuga/DesainIn.git
+``` 
+3. Copy file .env.example dan rename menjadi .env
 4. Buka project di terminal dan ketik command
 ```console
 composer install
 ``` 
-5. ketik command 
+5. Ketik command 
 ```console
 php artisan key:generate
 ``` 
-6. ketik command 
-```console
-php artisan migrate
-``` 
-
-7. ketik command 
+6. Ketik command 
 ```console
 php artisan serve
 ``` 
