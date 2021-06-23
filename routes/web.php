@@ -32,3 +32,17 @@ Route::get('/desain/website', function () {
 Route::get('/desain/logo', function () {
     return view('user/logo');
 });
+
+
+
+Route::get('/admin', function () {
+    return view('admin/dashboard');
+});
+
+Route::get('/admin/order', function () {
+    return view('admin/order');
+});
+
+Route::get('/admin/portfolio', function () {
+    return view('admin/portfolio');
+});

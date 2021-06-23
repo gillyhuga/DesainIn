@@ -17,7 +17,7 @@
             <p class="mt-3 mb-4"><span class="fw-medium">DesainIn </span>menawarkan layanan jasa desain grafis profesional
                 untuk kebutuhan pemasaran dan branding produk atau usaha anda, 
                 dengan berbagai macam pilihan paket dan harga yang murah. </p><a
-              class="btn btn-lg btn-danger hover-top btn-glow" href="#">Get Started </a>
+              class="btn btn-lg btn-danger hover-top btn-glow" href="#layanan">Get Started </a>
           </div>
         </div>
       </div>
@@ -162,13 +162,13 @@
 
     <!-- ============================================-->
     <!-- <section> begin ============================-->
-    <section class="bg-100 py-7">
+    <section class="bg-100 py-7" id="layanan">
 
       <div class="container-lg">
         <div class="row justify-content-center">
           <div class="col-md-8 col-lg-5 text-center mb-3">
             <h2>Pilihan Jasa Desain</h2>
-            <p>Let's choose the package that is best for you and explore it happily and cheerfully.</p>
+            <p>Mari pilih paket yang terbaik untuk Anda dan jelajahi dengan senang dan gembira. Pemesanan cepat tanpa login dan daftar</p>
           </div>
         </div>
         <div class="row h-100 justify-content-center">
