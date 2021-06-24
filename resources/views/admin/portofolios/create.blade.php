@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Movie')
+@section('title', 'Add')
 
 @section('content')
                 <main>

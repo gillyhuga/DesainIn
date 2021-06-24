@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Portofolio;
 class PortofolioController extends Controller
 {
@@ -40,6 +41,12 @@ class PortofolioController extends Controller
         $portofolio-> delete();  
         return redirect('/admin/portfolio');
 
+    }
+    
+    public function countPorto() {
+        
+        $jumlahporto = DB::table('portofolios')->count();
+        return view('admin\dashboard', compact(['jumlahporto']));
     }
     
 }
