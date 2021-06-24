@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PortofolioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,3 +47,10 @@ Route::get('/admin/order', function () {
 Route::get('/admin/portfolio', function () {
     return view('admin/portfolio');
 });
+
+Route::get('/admin/portfolio', [PortofolioController::class,'index']);
+Route::get('/admin/portfolios/create', [PortofolioController::class,'create']);
+Route::post('/admin', [PortofolioController::class,'store']);
+Route::get('/admin/portfolios/{id}/edit', [PortofolioController::class,'edit']);
+Route::put('/admin/portfolios/{id}', [PortofolioController::class,'update']);
+Route::delete('/admin/portfolios/{id}', [PortofolioController::class,'destroy']);
