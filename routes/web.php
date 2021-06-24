@@ -36,9 +36,6 @@ Route::get('/desain/logo', function () {
 
 
 
-Route::get('/admin', function () {
-    return view('admin/dashboard');
-});
 
 Route::get('/admin/order', function () {
     return view('admin/order');
@@ -54,3 +51,5 @@ Route::post('/admin', [PortofolioController::class,'store']);
 Route::get('/admin/portfolios/{id}/edit', [PortofolioController::class,'edit']);
 Route::put('/admin/portfolios/{id}', [PortofolioController::class,'update']);
 Route::delete('/admin/portfolios/{id}', [PortofolioController::class,'destroy']);
+
+Route::get('/admin/dashboard', [PortofolioController::class,'countPorto']);

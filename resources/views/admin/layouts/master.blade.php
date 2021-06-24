@@ -35,7 +35,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Main Menu</div>
-                            <a class="nav-link" href="{{url('admin')}}">
+                            <a class="nav-link" href="{{url('admin/dashboard')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Dashboard
                             </a>

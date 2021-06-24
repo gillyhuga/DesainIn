@@ -10,12 +10,7 @@
                             <li class="breadcrumb-item active">Order</li>
                         </ol>
                         <div class="card mb-4">
-                            <div class="card-body">
-                            <a href="{{url('/movies/create')}}" type="button" class="btn btn-success">
-                            <i class="fas fa-plus"></i>
-                                Tambahkan Data
-                            </a>
-                            </div>
+                            
                             
                         </div>
                         <div class="card mb-4">
@@ -46,9 +41,9 @@
                                                 <td>Deskripsi pesanan</td>
                                                 <td>
                                                 <div class="d-grid gap-2 d-md-block">
-                                                    <a href=" " class="btn btn-success float-left m-1">Berhasil</a>
-                                                    <a href=" " class="btn btn-warning float-left m-1">Diproses</a>
-                                                    <a href=" " class="btn btn-danger float-left m-1">Gagal</a>
+                                                    <a href=" " class="btn btn-success float-left m-1">Selesai</a>
+                                                    <a href=" " class="btn btn-warning float-left m-1">Edit</a>
+                                                    <a href=" " class="btn btn-danger float-left m-1">Hapus</a>
                                                     </div>
                                                     </td>
                                                 </tr>
