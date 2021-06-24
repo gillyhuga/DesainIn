@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('title', 'Movie')
+@section('title', 'Portfolio')
 
 @section('content')
                 <main>
@@ -35,24 +35,40 @@
 
                                          @foreach($portofolios as $portofolio)
                                             <tr>
-                                                <td>{{$portofolio -> id}}</td>
+                                                <td>{{ $loop->iteration }}</td>
                                                 <td>{{$portofolio -> title}}</td>
-                                                <td>{{$portofolio -> image_url}}</td>
-                                                <td>{{$portofolio -> status}}</td>
                                                 <td>
-                                                <a href=" "
-                                                class="btn btn-primary float-left m-1">Draft</a>
+                                                <a href="{{$portofolio -> image_url}}" target="_blank" rel="noopener noreferrer">Lihat Gambar</a>
+                                                </td>
+                                                <td>
+                                                    @if ($portofolio -> status === 0)
+                                                        <span class="badge badge-warning">Draft</span>
+                                                    @else
+                                                        <span class="badge badge-success">Published</span>
+                                                    @endif
+                                                </td>
+                       
+                                                <td>
+                                                
+                                                <form class="float-left m-1" action="/admin/portfolios/{{$portofolio->id}}" method="POST">
+                                                @method('PUT')  
+                                                        @csrf
+                                                        @if ($portofolio -> status === 0)
+                                                        <input type="hidden" name="status" value="1" />
+                                                        <button type="submit" class="btn btn-success ">Publish</button>
+                                                        @else
+                                                        <input type="hidden" name="status" value="0" />
+                                                        <button type="submit" class="btn btn-warning ">Draft</button>
+                                                        @endif
+                                                </form>
                                                 <a href="/admin/portfolios/{{$portofolio->id}}/edit"
-                                                class="btn btn-warning float-left m-1">Edit</a>
+                                                class="btn btn-primary float-left m-1">Edit</a>
                                                 <form class="float-left m-1"
                                                 action="/admin/portfolios/{{$portofolio->id}}" method="POST">
                                                 @method('delete')
                                                 @csrf
                                                 <button type="submit" class="btn btn-danger">Delete</a>
                                                 </form>
-                                                </td>
-
-                                                <td>
                                                 </td>
                                             </tr>
                                             @endforeach    

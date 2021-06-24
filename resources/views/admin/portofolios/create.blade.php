@@ -1,58 +1,51 @@
 @extends('admin.layouts.master')
-@section('title', 'Movie')
+@section('title', 'Tambah Portfolio')
 
 @section('content')
                 <main>
                     <div class="container-fluid">
-                        <h1 class="mt-4">Portfolio</h1>
+                        <h1 class="mt-4">Tambah Portfolio</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
                             <li class="breadcrumb-item active">Portfolio</li>
                         </ol>
-                    
-                            
-                        </div>
                         <div class="card mb-4">
                             <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                            <tr>
-                                                <th>Title</th>
-                                                <th>Picture</th>
-                                                <th>Status</th>
-                                                <th>Action</th>
-                                            
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                    
-                                            <tr>
-                                                
-                                            
-                                                
-                                                <form class="float-left m-1"
-                                                action="/admin" method="POST">     
-                                                @csrf
-                                                <td><input type="text" name="title"></td>
-                                                <td><input type="text" name="image_url"></td>
-                                                <td><input type="text" name="status"></td>
-                                                <td><button type="submit" class="btn btn-primary">Save</a></dt>
-                                                
-                                                
-                                            </tr>
-                                            </form>
-                                            
-                                            
-                                        
-                                        </tbody>
-                                    
-                                    </table>
-                                </div>
+                            <form action="/admin" method="POST" enctype="multipart/form-data">
+                            @CSRF
+                            <div class="card-body">
+                            <div class="row">
+                            <div class="col-8">
+                            <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" name="title" class="form-control @error('name')
+                            is-invalid @enderror" placeholder="Masukkan judul" >
+                            <small class="text-danger">@error('title') {{$message}}
+                            @enderror</small>
+                            </div>
+                            </div>
+                            <div class="col-8">
+                            <div class="form-group">
+                            <label for="image_url">Link Gambar</label>
+                            <input type="text" name="image_url" class="form-control @error('image_url')
+                            is-invalid @enderror" placeholder="Masukkan Link Gambar" >
+                            <small class="text-danger">@error('image_url') {{$message}}
+                            @enderror</small>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+                            <!-- /.row -->
+                            <div class="card-footer">
+                            <div class="d-flex justify-content-end">
+                            <button type="submit" class="m-1 btn btn-success">Tambahkan</button>
+                            </div>
+                            </div>
+                            </form>
                             </div>
                         </div>
-                    </div>
+                            
+                        
                 </main>
                 @endsection
 

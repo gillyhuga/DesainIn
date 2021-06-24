@@ -12,7 +12,7 @@ class PortofolioController extends Controller
     } 
     
     public function create() {
-        return view('admin\portofolios\create');
+        return view('admin/portofolios/create');
     }
 
     public function store(Request $request) {
@@ -24,7 +24,7 @@ class PortofolioController extends Controller
     
     public function edit($id) {
         $portofolio = Portofolio::find($id);
-        return view('admin\portofolios\edit', compact(['portofolio']));
+        return view('admin/portofolios/edit', compact(['portofolio']));
 
     } 
     public function update(Request $request, $id ) {

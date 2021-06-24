@@ -17,7 +17,7 @@ class CreatePortofoliosTable extends Migration
             $table->id(); 
             $table->string('title');
             $table->string('image_url');
-            $table->string('status');
+            $table->tinyInteger('status')->default(1);
             $table->timestamps();
         });
     }
