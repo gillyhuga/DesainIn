@@ -25,28 +25,42 @@
                                                 <th>Desain</th>
                                                 <th>Paket</th>
                                                 <th>Status</th>
-                                                <th>Deskripsi</th>
+                                                <th>Deskripsi Desain</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                        
                                             <tbody>
-                                                <tr>
-                                                <td>1</td>
-                                                <td>Udin</td>
-                                                <td>udin@gmail.com</td>
-                                                <td>Website</td>
-                                                <td>Hemat</td>
-                                                <td>Proses</td>
-                                                <td>Deskripsi pesanan</td>
-                                                <td>
-                                                <div class="d-grid gap-2 d-md-block">
-                                                    <a href=" " class="btn btn-success float-left m-1">Selesai</a>
-                                                    <a href=" " class="btn btn-warning float-left m-1">Edit</a>
-                                                    <a href=" " class="btn btn-danger float-left m-1">Hapus</a>
-                                                    </div>
-                                                    </td>
-                                                </tr>
+                                            @foreach ($orders as $order)
+                                            <tr>
+                                            <td>{{ $loop->iteration }}</td>
+                                            <td>{{ $order->name }}</td>
+                                            <td>{{ $order->email }}</td>
+                                            <td>{{ $order->category }}</td>
+                                            <td>{{ $order->package }}</td>
+                                            <td>
+                                            @if($order->status == 0)
+                                            <span class="badge badge-danger">Gagal</span>
+                                            @elseif($order->status == 1)
+                                            <span class="badge badge-warning">Proses</span>
+                                            @else
+                                            <span class="badge badge-success">Success</span>
+                                            @endif
+                                            </td>
+                                            <td>{{ $order->description }}</td>
+                                            <td>
+                                            
+                                            <a href="{{ route('order.edit', [$order->id]) }}"
+                                            class="btn btn-warning float-left m-1">Edit</a>
+                                            <form class="float-left m-1"
+                                            action="{{ route('order.destroy', [$order->id]) }}" method="POST">
+                                            @method('delete')
+                                            @csrf
+                                            <button type="submit" class="btn btn-danger">Delete</a>
+                                            </form>
+                                            </td>
+                                            </tr>
+                                            @endforeach 
                                             
                                             </tbody>
                                       

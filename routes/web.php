@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortofolioController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,14 +37,7 @@ Route::get('/desain/logo', function () {
 
 
 
-
-Route::get('/admin/order', function () {
-    return view('admin/order');
-});
-
-Route::get('/admin/portfolio', function () {
-    return view('admin/portfolio');
-});
+Route::resource('admin/order', OrderController::class);
 
 Route::get('/admin/portfolio', [PortofolioController::class,'index']);
 Route::get('/admin/portfolios/create', [PortofolioController::class,'create']);
