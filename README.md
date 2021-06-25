@@ -90,5 +90,13 @@ php artisan key:generate
 ``` 
 6. Ketik command 
 ```console
+php artisan migrate
+``` 
+7. Ketik command 
+```console
+php artisan db:seed
+``` 
+8. Ketik command 
+```console
 php artisan serve
 ``` 
