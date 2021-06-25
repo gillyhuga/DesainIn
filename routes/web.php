@@ -46,4 +46,4 @@ Route::get('/admin/portfolios/{id}/edit', [PortofolioController::class,'edit']);
 Route::put('/admin/portfolios/{id}', [PortofolioController::class,'update']);
 Route::delete('/admin/portfolios/{id}', [PortofolioController::class,'destroy']);
 
-Route::get('/admin/dashboard', [PortofolioController::class,'countPorto']);
+Route::get('/admin/dashboard', [PortofolioController::class,'count']);

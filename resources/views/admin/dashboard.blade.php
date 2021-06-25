@@ -14,7 +14,7 @@
                                 <div class="card-header">Total Order</div>
                                 <div class="card-body">
                                     <h1 class="card-title">
-                                    99
+                                    {{$jumlahorder}}
                                     </h1>
                                 </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Portofolio;
+use App\Models\Order;
 class PortofolioController extends Controller
 {
     public function index() {
@@ -43,10 +44,11 @@ class PortofolioController extends Controller
 
     }
     
-    public function countPorto() {
-        
+    public function count() {
+        $jumlahorder = DB::table('orders')->count();
         $jumlahporto = DB::table('portofolios')->count();
-        return view('admin/dashboard', compact(['jumlahporto']));
+        return view('admin/dashboard', compact(['jumlahporto','jumlahorder']));
     }
     
+
 }
