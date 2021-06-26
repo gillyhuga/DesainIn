@@ -23,7 +23,7 @@ Route::get('/', function () {
     return view('user/index');
 });
 
-Route::get('/portfolio', function () {
+Route::get('/desain/portfolio', function () {
     return view('user/portfolio');
 });
 
@@ -37,13 +37,22 @@ Route::get('/desain/logo', function () {
 
 
 
-Route::resource('admin/order', OrderController::class);
+Route::middleware(['auth:sanctum', 'verified'])
+->resource('order', OrderController::class);
 
-Route::get('/admin/portfolio', [PortofolioController::class,'index']);
-Route::get('/admin/portfolios/create', [PortofolioController::class,'create']);
-Route::post('/admin', [PortofolioController::class,'store']);
-Route::get('/admin/portfolios/{id}/edit', [PortofolioController::class,'edit']);
-Route::put('/admin/portfolios/{id}', [PortofolioController::class,'update']);
-Route::delete('/admin/portfolios/{id}', [PortofolioController::class,'destroy']);
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/portfolio', [PortofolioController::class,'index']);
+Route::middleware(['auth:sanctum', 'verified'])
+->get('portfolios/create', [PortofolioController::class,'create']);
+// Route::post('/admin', [PortofolioController::class,'store']);
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/portfolios/{id}/edit', [PortofolioController::class,'edit']);
+Route::middleware(['auth:sanctum', 'verified'])
+->put('/portfolios/{id}', [PortofolioController::class,'update']);
+Route::middleware(['auth:sanctum', 'verified'])
+->delete('/portfolios/{id}', [PortofolioController::class,'destroy']);
 
-Route::get('/admin/dashboard', [PortofolioController::class,'count']);
+// Route::get('/admin/dashboard', [PortofolioController::class,'count']);
+
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/dashboard', [PortofolioController::class,'count']);
