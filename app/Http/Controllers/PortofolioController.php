@@ -49,6 +49,11 @@ class PortofolioController extends Controller
         $jumlahporto = DB::table('portofolios')->count();
         return view('admin/dashboard', compact(['jumlahporto','jumlahorder']));
     }
+
+    public function portofolio() {
+        $portofolios = Portofolio::all();
+        return view('/user/portfolio',compact(['portofolios']));
+    }
     
 
 }

@@ -23,9 +23,8 @@ Route::get('/', function () {
     return view('user/index');
 });
 
-Route::get('/desain/portfolio', function () {
-    return view('user/portfolio');
-});
+Route::get('desain/portfolio', [PortofolioController::class,'portofolio']);
+
 
 Route::get('/desain/website', function () {
     return view('user/website');
