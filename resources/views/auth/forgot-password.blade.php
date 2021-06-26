@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <a class="navbar-brand" href="/"><img src="{{asset('/img/icons/logo.png')}}"  alt="" width="70" />
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">

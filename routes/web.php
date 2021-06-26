@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserOrderController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +34,10 @@ Route::get('/desain/website', function () {
 Route::get('/desain/logo', function () {
     return view('user/logo');
 });
+
+
+Route::resource('/desain/order', UserOrderController::class);
+
 
 
 

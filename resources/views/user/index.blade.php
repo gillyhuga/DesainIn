@@ -284,6 +284,30 @@
                     </div>
                   </div>
                 </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center"><img class="img-fluid"
+                        src="{{asset('/img/gallery/user-1.png')}}"  alt="" />
+                          <div class="flex-1 ms-3">
+                            <h6 class="mb-0 fs--1 text-1000 fw-medium">Yosua</h6>
+                            <p class="fs--2 fw-normal mb-0">Surabaya, Indonesia</p>
+                          </div>
+                        </div>
+                        <div class="d-flex align-items-center"><span class="text-900 me-3">5</span>
+                          <svg class="bi bi-star-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="#FEA250" viewBox="0 0 16 16">
+                            <path
+                              d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                            </path>
+                          </svg>
+                        </div>
+                      </div>
+                      <p class="card-text pt-3">“Harganya sangat terjangkau, dan pelayanan sangat baik”</p>
+                    </div>
+                  </div>
+                </div>
 
 
   

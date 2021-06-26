@@ -18,7 +18,7 @@
                                     </h1>
                                 </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/admin/order">View Details</a>
+                                        <a class="small text-white stretched-link" href="/order">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
@@ -32,7 +32,7 @@
                                     </h1>
                                 </div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/admin/portfolio">View Details</a>
+                                        <a class="small text-white stretched-link" href="/portfolio">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>

@@ -150,6 +150,7 @@
               @yield('portfolio')
               @yield('layanan-website')
               @yield('layanan-logo')
+              @yield('order')
               
 
 

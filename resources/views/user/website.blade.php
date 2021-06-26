@@ -67,7 +67,7 @@
                 <div class="text-center my-5">
                   <h2 class="mb-3"><span class="text-900">Rp </span>850.000,-
                   </h2>
-                  <button class="btn btn-outline-danger rounded-pill" type="submit">Pesan </button>
+                  <a href="/desain/order" class="btn btn-outline-danger rounded-pill" type="submit">Pesan</a>
                 </div>
               </div>
             </div>
@@ -123,7 +123,7 @@
                 <div class="text-center my-5">
                   <h2 class="mb-3"><span class="text-900">Rp </span>1.150.000,-
                   </h2>
-                  <button class="btn btn-outline-danger rounded-pill" type="submit">Pesan </button>
+                  <a href="/desain/order" class="btn btn-outline-danger rounded-pill" type="submit">Pesan</a>
                 </div>
               </div>
             </div>
@@ -187,7 +187,7 @@
                 <div class="text-center my-5">
                   <h2 class="mb-3"><span class="text-900">Rp </span>1.150.000,-
                   </h2>
-                  <button class="btn btn-danger hover-top btn-glow rounded-pill border-0" type="submit">Pesan</button>
+                  <a href="/desain/order" class="btn btn-outline-danger rounded-pill" type="submit">Pesan</a>
                 </div>
               </div>
             </div>
