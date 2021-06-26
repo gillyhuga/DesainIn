@@ -11,7 +11,7 @@
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                            <a href="/portfolios/create" type="button" class="btn btn-success">
+                            <a href="/portfolio/create" type="button" class="btn btn-success">
                             <i class="fas fa-plus"></i>
                                 Tambahkan Data
                             </a>
@@ -61,10 +61,10 @@
                                                         <button type="submit" class="btn btn-warning ">Draft</button>
                                                         @endif
                                                 </form>
-                                                <a href="/portfolios/{{$portofolio->id}}/edit"
+                                                <a href="/portfolio/{{$portofolio->id}}/edit"
                                                 class="btn btn-primary float-left m-1">Edit</a>
                                                 <form class="float-left m-1"
-                                                action="/portfolios/{{$portofolio->id}}" method="POST">
+                                                action="/portfolio/{{$portofolio->id}}" method="POST">
                                                 @method('delete')
                                                 @csrf
                                                 <button type="submit" class="btn btn-danger">Delete</a>
