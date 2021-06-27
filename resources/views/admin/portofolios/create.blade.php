@@ -6,12 +6,12 @@
                     <div class="container-fluid">
                         <h1 class="mt-4">Tambah Portfolio</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
                             <li class="breadcrumb-item active">Portfolio</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                            <form action="/admin" method="POST" enctype="multipart/form-data">
+                            <form action="/portfolio" method="POST" enctype="multipart/form-data">
                             @CSRF
                             <div class="card-body">
                             <div class="row">

@@ -22,8 +22,18 @@
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="fas fa-user fa-fw"></i>
                  </button>
+                 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Logout</a>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+
+                                <x-jet-dropdown-link href="{{ route('logout') }}"
+                                         onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                    {{ __('Log Out') }}
+                                </x-jet-dropdown-link>
+                            </form>
+                            
                         </div>
                 </li>
                 
@@ -35,15 +45,15 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Main Menu</div>
-                            <a class="nav-link" href="{{url('admin/dashboard')}}">
+                            <a class="nav-link" href="{{url('/dashboard')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Dashboard
                             </a>
-                            <a class="nav-link" href="{{url('admin/order')}}">
+                            <a class="nav-link" href="{{url('/order')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Order
                             </a>
-                            <a class="nav-link" href="{{url('admin/portfolio')}}">
+                            <a class="nav-link" href="{{url('/portfolio')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Portfolio
                             </a>

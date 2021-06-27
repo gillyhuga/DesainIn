@@ -24,32 +24,19 @@
                     </div>
 
                     <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
+                    @foreach ($portofolios as $portofolio)
+                    @if($portofolio->status == 1)
                         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                             <div class="portfolio-wrap">
-                                <img src="{{asset('/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
+                                <img src="{{ $portofolio->image_url }}" class="img-fluid" alt="">
                                 <div class="portfolio-info">
-                                    <h4>ONNE </h4>
-                                    <p>Label kemasan </p>
-                                    <div class="portfolio-links">
-                                        <a href="portfolio-details.html" title="More Details"><i class="fas fa-link"></i></a>
-                                    </div>
+                                    <h4>{{ $portofolio->title }}</h4>
+     
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="portfolio-wrap">
-                                <img src="{{asset('/img/portfolio/portfolio-1.jpg')}}"  class="img-fluid" alt="">
-                                <div class="portfolio-info">
-                                    <h4>Zugucase.com</h4>
-                                    <p>Web</p>
-                                    <div class="portfolio-links">
-                                        <a href="portfolio-details.html" title="More Details"><i class="fas fa-link"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endif
+                        @endforeach 
 
                     </div>
 
@@ -59,3 +46,6 @@
 
       
     @endsection
+
+
+   

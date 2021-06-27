@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserOrderController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,9 +25,7 @@ Route::get('/', function () {
     return view('user/index');
 });
 
-Route::get('/portfolio', function () {
-    return view('user/portfolio');
-});
+Route::get('desain/portfolio', [PortofolioController::class,'portofolio']);
 
 Route::get('/desain/website', function () {
     return view('user/website');
@@ -36,14 +36,28 @@ Route::get('/desain/logo', function () {
 });
 
 
+Route::resource('/desain/order', UserOrderController::class);
 
-Route::resource('admin/order', OrderController::class);
 
-Route::get('/admin/portfolio', [PortofolioController::class,'index']);
-Route::get('/admin/portfolios/create', [PortofolioController::class,'create']);
-Route::post('/admin', [PortofolioController::class,'store']);
-Route::get('/admin/portfolios/{id}/edit', [PortofolioController::class,'edit']);
-Route::put('/admin/portfolios/{id}', [PortofolioController::class,'update']);
-Route::delete('/admin/portfolios/{id}', [PortofolioController::class,'destroy']);
 
-Route::get('/admin/dashboard', [PortofolioController::class,'countPorto']);
+
+Route::middleware(['auth:sanctum', 'verified'])
+->resource('order', OrderController::class);
+
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/portfolio', [PortofolioController::class,'index']);
+Route::middleware(['auth:sanctum', 'verified'])
+->get('portfolio/create', [PortofolioController::class,'create']);
+Route::middleware(['auth:sanctum', 'verified'])
+->post('/portfolio', [PortofolioController::class,'store']);
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/portfolio/{id}/edit', [PortofolioController::class,'edit']);
+Route::middleware(['auth:sanctum', 'verified'])
+->put('/portfolio/{id}', [PortofolioController::class,'update']);
+Route::middleware(['auth:sanctum', 'verified'])
+->delete('/portfolio/{id}', [PortofolioController::class,'destroy']);
+
+// Route::get('/admin/dashboard', [PortofolioController::class,'count']);
+
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/dashboard', [PortofolioController::class,'count']);

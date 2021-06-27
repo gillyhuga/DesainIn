@@ -44,7 +44,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto border-bottom border-lg-bottom-0 pt-2 pt-lg-0">
             <li class="nav-item"><a class="nav-link active active" aria-current="page" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="/portfolio">Portfolio </a></li>
+            <li class="nav-item"><a class="nav-link" href="/desain/portfolio">Portfolio </a></li>
             <li class="nav-item">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Layanan
@@ -57,8 +57,19 @@
             
           </ul>
           <form class="d-flex py-3 py-lg-0">
-            <button class="btn btn-link text-1000 fw-medium order-1 order-lg-0" type="button" data-toggle="modal" data-target="#myModal">Sign in</button>
-            <button class="btn btn-outline-danger rounded-pill order-0" data-toggle="modal" data-target="#myModal2" type="button">Sign Up</button>
+          @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-2 py-1 sm:block">
+                    @auth
+                      
+                        <a href="{{ url('/dashboard') }}" class="btn btn-outline-danger rounded-pill order-0">Dashboard</a>
+                    @else
+                        <a href="{{ route('login') }}" class="btn btn-outline-danger rounded-pill order-0">Log in</a>
+
+                    @endauth
+                </div>
+            @endif
+            
+            
           </form>
         </div>
       </div>
@@ -139,6 +150,7 @@
               @yield('portfolio')
               @yield('layanan-website')
               @yield('layanan-logo')
+              @yield('order')
               
 
 

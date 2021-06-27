@@ -6,12 +6,12 @@
                     <div class="container-fluid">
                         <h1 class="mt-4">Portfolio</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="dashboard">Dashboard</a></li>
                             <li class="breadcrumb-item active">Portfolio</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-body">
-                            <a href="/admin/portfolios/create" type="button" class="btn btn-success">
+                            <a href="/portfolio/create" type="button" class="btn btn-success">
                             <i class="fas fa-plus"></i>
                                 Tambahkan Data
                             </a>
@@ -50,7 +50,7 @@
                        
                                                 <td>
                                                 
-                                                <form class="float-left m-1" action="/admin/portfolios/{{$portofolio->id}}" method="POST">
+                                                <form class="float-left m-1" action="/portfolios/{{$portofolio->id}}" method="POST">
                                                 @method('PUT')  
                                                         @csrf
                                                         @if ($portofolio -> status === 0)
@@ -61,10 +61,10 @@
                                                         <button type="submit" class="btn btn-warning ">Draft</button>
                                                         @endif
                                                 </form>
-                                                <a href="/admin/portfolios/{{$portofolio->id}}/edit"
+                                                <a href="/portfolio/{{$portofolio->id}}/edit"
                                                 class="btn btn-primary float-left m-1">Edit</a>
                                                 <form class="float-left m-1"
-                                                action="/admin/portfolios/{{$portofolio->id}}" method="POST">
+                                                action="/portfolio/{{$portofolio->id}}" method="POST">
                                                 @method('delete')
                                                 @csrf
                                                 <button type="submit" class="btn btn-danger">Delete</a>
